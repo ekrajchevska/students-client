@@ -1,0 +1,13 @@
+form{
+  background-color: lightsteelblue;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+input{
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+}
+
+h2 button{
+    margin-left: 10px;
+}
