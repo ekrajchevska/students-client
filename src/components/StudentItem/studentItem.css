@@ -1,3 +1,11 @@
 li:hover{
     color: dodgerblue;
 }
+
+li{
+    margin-bottom: 7px;
+}
+
+button{
+    margin-right: 7px;
+}

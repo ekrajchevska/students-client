@@ -2,6 +2,7 @@ form{
   background-color: lightsteelblue;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 input{
     border-radius: 5px;
@@ -10,4 +11,8 @@ input{
 
 h2 button{
     margin-left: 10px;
+}
+
+h2{
+    line-height: 0;
 }

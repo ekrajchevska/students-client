@@ -3,10 +3,6 @@ import './studentItem.css';
 
 class StudentItem extends Component{
 
-    constructor(props){
-        super(props);
-    }
-
     sendIndex = () =>{
         this.props.notifyClick(this.props.index);
     };
@@ -17,15 +13,15 @@ class StudentItem extends Component{
 
     render(){
         return(
-            <div>
+            <div className={'container-fluid'}>
                 <li className={'row'}>
-                    <div className={'col-2'}>{this.props.student.index}</div>
-                    <div className={'col-2'}>{this.props.student.name}</div>
-                    <div className={'col-2'}>{this.props.student.lastName}</div>
-                    <div className={'col-2'}>{this.props.student.studyProgram}</div>
-                    <div className={'col-2'}>
-                        <button className={'btn btn-outline-info'} onClick={this.sendIndex}>Edit</button>
-                        <button className={'btn btn-outline-danger'} onClick={this.deleteStudent}>Delete</button>
+                    <div className={'col-sm-1'}>{this.props.student.index}</div>
+                    <div className={'col-sm-1'}>{this.props.student.name}</div>
+                    <div className={'col-sm-1'}>{this.props.student.lastName}</div>
+                    <div className={'col-sm-1'}>{this.props.student.studyProgram}</div>
+                    <div className={'col-sm-2'}>
+                        <button className={'btn btn-info'} onClick={this.sendIndex}>Edit</button>
+                        <button className={'btn btn-danger'} onClick={this.deleteStudent}>Delete</button>
                     </div>
                 </li>
 

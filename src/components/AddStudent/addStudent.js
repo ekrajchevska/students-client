@@ -25,28 +25,30 @@ class AddStudent extends Component{
 
         return(
             <form onSubmit={this.callSubmit}>
+                <div className={'container-fluid'}>
                 <div className={"row"}>
-                    <div className={"col-2"}>
+                    <div className={"col-sm-2"}>
                         <input type="text" name={"studentName"} placeholder={"Name"}/>
                     </div>
 
-                    <div className={"col-2"}>
+                    <div className={"col-sm-2"}>
                         <input type="text" name={"studentSurname"} placeholder={"Surname"}/>
                     </div>
 
-                    <div className={"col-2"}>
+                    <div className={"col-sm-2"}>
                         <input type="text" name={"studentIndex"} placeholder={"Index"}/>
                     </div>
 
-                    <div className={"col-2"}>
+                    <div className={"col-sm-1"}>
                         <select name={"studentStudies"}>
                             {studyProgramOptions}
                         </select>
                     </div>
 
-                    <div className={"col-1"}>
-                        <button type={"submit"} className={"btn btn-light"}>Add student</button>
+                    <div className={"col-sm-1"}>
+                        <button type={"submit"} className={"btn btn-success"}>Add student</button>
                     </div>
+                </div>
                 </div>
             </form>
         );

@@ -3,11 +3,6 @@ import StudyProgramItem from "../StudyProgramItem/studyProgramItem";
 
 class StudyProgramList extends Component{
 
-    constructor(props) {
-        super(props);
-    }
-
-
     render(){
         let listItems = this.props.studyPrograms.map((element,index)=>{
             return <StudyProgramItem studyProgram={element}

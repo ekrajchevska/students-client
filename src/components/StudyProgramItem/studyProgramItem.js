@@ -2,26 +2,22 @@ import React, { Component } from 'react'
 
 class StudyProgramItem extends Component{
 
-    constructor(props){
-        super(props);
-    }
-
     sendId = () =>{
         this.props.notifyEdit(this.props.index)
     };
 
-    deleteId = () =>{
-        this.props.notifyDelete(this.props.studyProgram.id);
-    }
+    deleteSp = () =>{
+        this.props.notifyDelete(this.props.studyProgram.id, this.props.studyProgram.name);
+    };
 
     render(){
         return(
-            <div>
+            <div className={'container-fluid'}>
                 <li className={'row'}>
-                    <div className={'col-2'}>{this.props.studyProgram.name}</div>
-                    <div className={'col-2'}>
-                        <button className={'btn btn-outline-info'} onClick={this.sendId}>Edit</button>
-                        <button className={'btn btn-outline-danger'} onClick={this.deleteId}>Delete</button>
+                    <div className={'col-sm-1'}>{this.props.studyProgram.name}</div>
+                    <div className={'col-sm-2'}>
+                        <button className={'btn btn-info'} onClick={this.sendId}>Edit</button>
+                        <button className={'btn btn-danger'} onClick={this.deleteSp}>Delete</button>
                     </div>
                 </li>
 

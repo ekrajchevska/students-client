@@ -10,6 +10,7 @@ export const listStudyPrograms = () =>{
 };
 
 export const addStudyProgram = (studyProgram) =>{
+    console.log("-- studyProgram repository call add --");
     return fetch(url,{
         method:"POST",
         headers:{
@@ -21,8 +22,8 @@ export const addStudyProgram = (studyProgram) =>{
     })
 };
 
-export const deleteStudyProgram = (index)=>{
-    console.log("studyProgram repo delete: "+index)
+export const deleteStudyProgram = (index, name)=>{
+    console.log("-- studyProgram repository call delete: "+index+" --");
     return fetch(url+"/"+index,{
         method:"DELETE",
         headers: {
@@ -33,7 +34,7 @@ export const deleteStudyProgram = (index)=>{
 };
 
 export const modifyStudyProgram = (studyProgram) =>{
-    console.log("modify program with id: "+studyProgram.id)
+    console.log("-- studyProgram repository call modify: "+studyProgram.id+" --")
     return fetch(url+"/"+studyProgram.id, {
         method:"PUT",
         headers:{

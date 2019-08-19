@@ -2,15 +2,13 @@ import React, {Component} from 'react'
 
 class EditProgram extends Component{
 
-    constructor(props){
-        super(props);
-    }
-
     callSubmit = (formSubmitEvent) =>{
 
         formSubmitEvent.preventDefault();
-        if(formSubmitEvent.target.studyProgramName.value==="")
+        if(formSubmitEvent.target.studyProgramName.value===""){
+            alert("Missing information!");
             return;
+        }
 
         this.props.formSubmit(
             {

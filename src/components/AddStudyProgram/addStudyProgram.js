@@ -17,14 +17,16 @@ class AddStudyProgram extends Component{
 
         return(
             <form onSubmit={this.callSubmit}>
+                <div className={'container-fluid'}>
                 <div className={"row"}>
                     <div className={"col-2"}>
                         <input type="text" name={"studyProgramName"} placeholder={"Name"}/>
                     </div>
                     <div className={"col-1"}>
-                        <button type={"submit"} className={"btn btn-light"}>Add study program</button>
+                        <button type={"submit"} className={"btn btn-success"}>Add study program</button>
                     </div>
                 </div>
+            </div>
             </form>
         );
     }

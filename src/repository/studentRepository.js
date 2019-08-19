@@ -3,6 +3,7 @@ export const url = "http://localhost:8080/api/students";
 export const listStudents = () =>{
    return fetch(url, {
            method : "GET",
+
        headers:{
            "Content-Type" : "application/json"
        }
@@ -10,7 +11,7 @@ export const listStudents = () =>{
 };
 
 export const addStudent = (student) =>{
-    console.log("student repo");
+    console.log("-- student repository call add for --");
     console.log("index: "+student.index+" name: "+student.name+" lastName: "+
         student.lastName+" program: "+student.studyProgram);
 
@@ -28,7 +29,7 @@ export const addStudent = (student) =>{
 };
 
 export const deleteStudent = (index) =>{
-    console.log("student repo delete index: "+index)
+    console.log("-- student repository call delete "+index+" --");
     return fetch(url+"/"+index,{
         method:"DELETE",
         headers: {
@@ -38,6 +39,7 @@ export const deleteStudent = (index) =>{
 };
 
 export const modifyStudent = (student) =>{
+    console.log("-- student repository call modify "+student.index+"--");
     return fetch(url+"/"+student.index,{
         method:"PUT",
         headers:{

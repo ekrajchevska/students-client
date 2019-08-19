@@ -2,23 +2,21 @@ import React, {Component} from 'react'
 
 class EditStudentDetails extends Component{
 
-    constructor(props){
-        super(props);
-    }
-
     callSubmit = (formSubmitEvent) =>{
 
         formSubmitEvent.preventDefault();
-        if(formSubmitEvent.target.studentIndex.value==="" ||
-        formSubmitEvent.target.studentName.value==="" ||
-            formSubmitEvent.target.studentSurname.value ==="")
+        if(formSubmitEvent.target.studentName.value==="" ||
+            formSubmitEvent.target.studentSurname.value ===""){
+
+            alert("Missing information!");
             return;
+        }
 
         this.props.formSubmit(
             {
                 name: formSubmitEvent.target.studentName.value,
                 lastName: formSubmitEvent.target.studentSurname.value,
-                index: formSubmitEvent.target.studentIndex.value,
+                index: this.props.student.index,
                 studyProgram: formSubmitEvent.target.studentStudies.value
             }
         );
@@ -51,14 +49,7 @@ class EditStudentDetails extends Component{
                                    />
                         </div>
 
-                        <div className={"col-2"}>
-                            <input type="text"
-                                   name={"studentIndex"}
-                                   defaultValue={this.props.student.index}
-                                   />
-                        </div>
-
-                        <div className={"col-2"}>
+                        <div className={"col-1"}>
                             <select name={"studentStudies"} defaultValue={this.props.student.studyProgram}>
                                 {studyProgramOptions}
                             </select>

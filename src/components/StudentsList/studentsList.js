@@ -3,10 +3,6 @@ import StudentItem from "../StudentItem/studentItem";
 
 class StudentsList extends Component{
 
-    constructor(props) {
-        super(props);
-    }
-
     render(){
         let listItems = this.props.students.map((element,index)=>{
             return <StudentItem student={element}
