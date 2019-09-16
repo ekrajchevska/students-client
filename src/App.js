@@ -154,8 +154,10 @@ class App extends Component {
 
     addProgramItem = (studyProgram) =>{
 
-        if(studyProgram.name==="")
+        if(studyProgram.name==="") {
+            alert("Missing information!");
             return;
+        }
 
         addStudyProgram(studyProgram)
             .then(response=>{
@@ -192,7 +194,7 @@ class App extends Component {
         return(
      <div>
          <h2>Students
-             <button className={'btn'} onClick={this.showAddStudentComponent}>Add</button>
+             <button id={'addStudent'} className={'btn'} onClick={this.showAddStudentComponent}>Add</button>
          </h2>
 
          <AddStudent shown={this.state.showAddStudent}
@@ -209,7 +211,7 @@ class App extends Component {
                              studyPrograms={this.state.studyPrograms}/>
 
          <h2>Study Programs
-             <button className={'btn'} onClick={this.showAddStudyProgramComponent}>Add</button>
+             <button id={'addStudyProgram'} className={'btn'} onClick={this.showAddStudyProgramComponent}>Add</button>
          </h2>
 
          <AddStudyProgram shown={this.state.showAddProgram} add={this.addProgramItem}/>

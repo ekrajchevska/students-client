@@ -15,7 +15,7 @@ class StudentsList extends Component{
 
         return(
            <div>
-               <ul className='list-group'>
+               <ul id={'student-items'} className='list-group'>
                    {listItems}
                </ul>
            </div>

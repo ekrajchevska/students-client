@@ -20,7 +20,6 @@ class StudyProgramItem extends Component{
                         <button className={'btn btn-danger'} onClick={this.deleteSp}>Delete</button>
                     </div>
                 </li>
-
             </div>
         );
     }

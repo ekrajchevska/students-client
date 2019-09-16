@@ -24,7 +24,6 @@ class StudentItem extends Component{
                         <button className={'btn btn-danger'} onClick={this.deleteStudent}>Delete</button>
                     </div>
                 </li>
-
             </div>
         );
     }

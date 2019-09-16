@@ -40,13 +40,13 @@ class AddStudent extends Component{
                     </div>
 
                     <div className={"col-sm-1"}>
-                        <select name={"studentStudies"}>
+                        <select id={"programsOptions"} name={"studentStudies"}>
                             {studyProgramOptions}
                         </select>
                     </div>
 
                     <div className={"col-sm-1"}>
-                        <button type={"submit"} className={"btn btn-success"}>Add student</button>
+                        <button id={"studentSubmit"} type={"submit"} className={"btn btn-success"}>Add student</button>
                     </div>
                 </div>
                 </div>
